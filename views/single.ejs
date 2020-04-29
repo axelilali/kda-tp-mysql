@@ -1,0 +1,22 @@
+<%- include('./partials/header')%>
+
+<div class="ui stackable centered grid">
+  <div class="seven wide column">
+    <h1>Update</h1>
+    <form action="/student" method="POST" class="ui form">
+      <input value=<%= data.id %> type="hidden" name="id">
+      <div class="field">
+        <label>Nom</label>
+        <input value=<%= data.nom %> type="text" name="nom">
+      </div>
+      <div class="field">
+        <label>Prenom</label>
+        <input value=<%= data.prenom %>  type="text" name="prenom">
+      </div>
+      <button class="ui small button" type="submit">Mettre à jour</button>
+    </form>
+
+  </div>
+</div>
+
+<%- include('./partials/footer')%>

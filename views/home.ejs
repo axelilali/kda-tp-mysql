@@ -1,0 +1,29 @@
+<%- include('./partials/header')%>
+
+
+
+<div class="ui stackable centered grid">
+  <div class="seven wide column">
+    <h1>Students List</h1>
+
+    <div class="ui middle aligned divided list">
+    <% for(i=0;i<data.length;i++){%>
+
+        <div style="padding:10px 0" class="item">
+          <div class="right floated content">
+            <a href=<%=`/student/${data[i].id}`%> class="ui mini button">edit</a>
+            <a href=<%=`/delete/${data[i].id}`%> class="ui mini button">delete</a>
+          </div>
+          <i class="large user circle outline icon"></i>
+          <div class="content">
+            <p><%=` ${data[i].nom} ${data[i].prenom}`%></p>
+          </div>
+        </div>
+
+    <%} %>
+</div>
+
+</div>
+</div>
+
+<%- include('./partials/footer')%>

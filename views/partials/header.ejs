@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+  <link rel="stylesheet" href="./css/master.css">
+</head>
+
+<body>
+
+  <div class="ui container">
+    <div class="ui hidden divider"></div>
+    <div class="ui secondary  menu">
+      <a href="/" class="active item">Accueil</a>
+      <a id="save" class="active item">Ajouter</a>
+
+      <div class="right menu">
+        <div class="item">
+          <div class="ui icon input">
+            <input type="text" placeholder="Rechercher...">
+            <i class="search link icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="ui mini modal">
+      <i class="close icon"></i>
+      <div class="content">
+        <form action="/add-student" method="POST" class="ui form">
+          <h1>Ajouter</h1>
+          <div class="field">
+            <label>Nom</label>
+            <input type="text" name="nom" required>
+          </div>
+          <div class="field">
+            <label>Prenom</label>
+            <input type="text" name="prenom" required>
+          </div>
+          <button class="ui small button" type="submit">Ajouter</button>
+        </form>
+      </div>
+    </div>
